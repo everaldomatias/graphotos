@@ -16,7 +16,7 @@
 	<?php if ( !empty( $gallery ) ): ?>
 		<?php foreach ( explode( ',', $gallery ) as $image_id ) {
 			$image = wp_get_attachment_image_src( $image_id, 'photos-thumb' );
-			echo '<a href='. wp_get_attachment_url( $image_id ) .' alt="">';
+			echo '<a class="fancybox" rel="group" href='. wp_get_attachment_url( $image_id ) .'>';
 			echo '<img src='. $image[0] .' alt="'. get_the_title() .'" class="each photos col-sm-3 nopadding">';
 			echo '</a>';
 		} ?>

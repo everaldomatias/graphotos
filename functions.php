@@ -229,8 +229,15 @@ function odin_enqueue_scripts() {
 		// Main jQuery.
 		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
 	} else {
+		// Fancybox
+		wp_enqueue_style( 'fancyBox-style', $template_url . '/assets/js/libs/fancybox/jquery.fancybox.css', array(), null, 'all' );
+		wp_enqueue_script( 'fancyBox', $template_url . '/assets/js/libs/fancybox/jquery.fancybox.pack.js', array(), null, true );
+
+		// Custom Main jQuery.
+		wp_enqueue_script( 'custom-main', $template_url . '/assets/js/custom-main.js', array(), null, true );
+
 		// Grunt main file with Bootstrap, FitVids and others libs.
-		wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
+		//wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
 	}
 
 	// Grunt watch livereload in the browser.
