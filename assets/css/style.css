@@ -12,11 +12,33 @@ Author URI: http://wpod.in/#colaboradores
 
 
 /* Geral */
+img {
+	height: auto;
+	max-width: 100%;
+}
 .nopadding {
 	padding: 0;
 }
 
 /* Photos */
+.each.photos {
+	overflow: hidden;
+	position: relative;
+}
+.each.photos .desc {
+	background: rgba(200, 54, 54, 0.5);
+	bottom: -50%;
+	color: #FFF;
+	font-size: 1.3em;
+	padding: 20px;
+	position: absolute;
+	text-align: center;
+	transition: all 300ms ease-in-out;
+	width: 100%;
+}
+.each.photos:hover .desc {
+	bottom: 0;
+}
 @media all and ( max-width: 768px ) {
 	.each.photos {
 		display: block;

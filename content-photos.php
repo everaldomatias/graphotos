@@ -27,6 +27,7 @@
 	<?php if ( has_post_thumbnail() ): ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class( 'each photos col-sm-3 nopadding' ); ?>>
 			<a href="<?php the_permalink(); ?>">
+				<span class="desc"><?php the_title(); ?></span><!-- .desc -->
 				<?php the_post_thumbnail( 'photos-thumb' ); ?>
 			</a>
 		</article><!-- #post-## -->
