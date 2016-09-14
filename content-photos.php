@@ -17,7 +17,7 @@
 		<?php foreach ( explode( ',', $gallery ) as $image_id ) {
 			$image = wp_get_attachment_image_src( $image_id, 'photos-thumb' );
 			echo '<a class="fancybox" rel="group" href='. wp_get_attachment_url( $image_id ) .'>';
-			echo '<img src='. $image[0] .' alt="'. get_the_title() .'" class="each photos col-sm-3 nopadding">';
+			echo '<img src='. $image[0] .' alt="'. get_the_title() .'" class="each photos col-sm-2 nopadding">';
 			echo '</a>';
 		} ?>
 	<?php endif; ?>
@@ -25,7 +25,7 @@
 <?php else: ?>
 
 	<?php if ( has_post_thumbnail() ): ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class( 'each photos col-sm-3 nopadding' ); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class( 'each photos col-sm-2 nopadding' ); ?>>
 			<a href="<?php the_permalink(); ?>">
 				<span class="desc"><?php the_title(); ?></span><!-- .desc -->
 				<?php the_post_thumbnail( 'photos-thumb' ); ?>

@@ -61,8 +61,8 @@ function kirki_config() {
 	);
 	$args = array(
 		'description'  => '',
-		'color_accent' => '#FFA827',
-		'color_back'   => '#333',
+		'color_accent' => '',
+		'color_back'   => '',
 		'textdomain'   => 'kirki',
 		'i18n'         => $strings,
 		'url_path'     => get_template_directory_uri() . '/inc/kirki'

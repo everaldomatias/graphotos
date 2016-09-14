@@ -101,5 +101,5 @@
 		</div><!-- .container-->
 	</header><!-- #header -->
 
-	<div id="wrapper" class="container">
+	<div id="wrapper" class="container-fluid">
 		<div class="row">
