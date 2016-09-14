@@ -15,3 +15,17 @@ function photos_home_posts( $query ) {
 
 	return $query;
 }
+
+/*
+ * Verify and set the site by private
+ * 
+ */
+function photos_redirect_private_site() {
+    $isLoginPage = strpos( $_SERVER['REQUEST_URI'], "wp-login.php" ) !== false;
+    if( ! is_user_logged_in() && ! is_admin() && ! $isLoginPage && true == get_theme_mod( 'private_site' ) ) {
+    	$location = 'Location: '. wp_login_url();
+        header( $location );
+        die();
+    }
+}
+add_action( 'init', 'photos_redirect_private_site' );
