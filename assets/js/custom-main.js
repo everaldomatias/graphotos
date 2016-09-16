@@ -1,7 +1,15 @@
 jQuery(document).ready(function($) {
-	$('.fancybox').fancybox({
-		padding		: '0',
-		autoHeight	: true,
-		maxHeight	: '80%'
-	});
+	if (window.innerWidth < 992) {
+		$('.fancybox').fancybox({
+			padding		: '0',
+			autoHeight	: true,
+			maxHeight	: '100%'
+		});
+	} else {
+		$('.fancybox').fancybox({
+			padding		: '0',
+			autoHeight	: true,
+			maxHeight	: '85%'
+		});
+	}
 });
