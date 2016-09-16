@@ -12,12 +12,22 @@ Author URI: http://wpod.in/#colaboradores
 
 
 /* Geral */
+html, body {
+	color: red;
+	font-family: 'Source Sans Pro', sans-serif;
+}
 img {
 	height: auto;
 	max-width: 100%;
 }
 .nopadding {
 	padding: 0;
+}
+
+/* Fonts */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 900;
 }
 
 /* Photos */

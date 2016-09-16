@@ -218,6 +218,9 @@ function odin_enqueue_scripts() {
 	wp_enqueue_script( 'html5shiv', $template_url . '/assets/js/html5.js' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
+	// Google Fonts
+	wp_enqueue_style( 'source-sans-pro', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,900,900i', array(), null, 'all' );
+
 	// General scripts.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 		// Bootstrap.
