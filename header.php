@@ -31,25 +31,17 @@
 		<div class="container">
 			<div class="page-header hidden-xs">
 
-				<?php odin_the_custom_logo(); ?>
-
-				<?php if ( is_home() ) : ?>
-					<h1 class="site-title">
+				<?php if ( has_custom_logo() ) : ?>
+					<?php the_custom_logo(); ?>
+			  	<?php else : ?>
+			  		<h1 class="site-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
 						</a>
 					</h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				<?php else : ?>
-					<div class="site-title h1">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
-						</a>
-					</div>
-					<div class="site-description h2">
-						<?php bloginfo( 'description' ); ?>
-					</div>
-				<?php endif ?>
+			  	<?php endif; ?>
+
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 
 				<?php
 					$header_image = get_header_image();
